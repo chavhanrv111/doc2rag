@@ -10,12 +10,26 @@ Turn PDFs, Office files, images and text into **full text** and **vector-store-r
 
 ## Install
 
+doc2rag is used straight from Git; it is not published on PyPI. Pick whichever fits:
+
 ```bash
-pip install "doc2rag[docling]"          # Office + PDF, CPU-friendly
-pip install "doc2rag[mineru]"           # best PDF/scan quality (Python 3.10-3.13)
-pip install "doc2rag[all]"              # both
-# from source: pip install "./doc2rag[docling]"
+# A. pip, straight from GitHub (choose parser extras: docling, mineru, all)
+pip install "doc2rag[docling] @ git+https://github.com/chavhanrv111/doc2rag.git"
+pip install "doc2rag[all] @ git+https://github.com/chavhanrv111/doc2rag.git@v0.2.0"   # pin a tag/commit
+
+# B. in requirements.txt / pyproject.toml of your own project
+doc2rag[docling] @ git+https://github.com/chavhanrv111/doc2rag.git@v0.2.0
+
+# C. clone and edit it locally (changes apply immediately)
+git clone https://github.com/chavhanrv111/doc2rag.git
+pip install -e "./doc2rag[docling]"
+
+# D. no install at all (zero-dependency core, text files only until a parser is installed)
+git clone https://github.com/chavhanrv111/doc2rag.git
+#   then in your code:  import sys; sys.path.insert(0, "doc2rag/src"); import doc2rag
 ```
+
+Parsers are extras: `docling` (Office + PDF, CPU-friendly), `mineru` (best PDF/scan quality, Python 3.10-3.13) or `all`. Upgrade with `pip install --upgrade --force-reinstall --no-deps "doc2rag @ git+https://github.com/chavhanrv111/doc2rag.git"`.
 
 Or without installing anything locally (Docker):
 

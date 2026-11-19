@@ -7,4 +7,3 @@ __pycache__/
 .mcp
 contracts-data/
 .vscode/
-tests/

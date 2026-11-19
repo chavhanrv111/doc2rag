@@ -1,0 +1,15 @@
+[
+  {"type": "header", "text": "Confidential", "page_idx": 0},
+  {"type": "text", "text": "MASTER LICENSE AGREEMENT", "text_level": 1, "page_idx": 0},
+  {"type": "text", "text": "This Agreement is entered into by Pegasystems Inc. and Customer.", "page_idx": 0},
+  {"type": "text", "text": "1. Definitions", "text_level": 2, "page_idx": 0},
+  {"type": "list", "sub_type": "text", "list_items": ["Software means the licensed programs.", "Fees means the amounts in Exhibit A."], "page_idx": 1},
+  {"type": "table", "img_path": "images/t1.jpg", "table_caption": ["Exhibit A - Fees"], "table_footnote": ["All amounts in USD"], "table_body": "<table><tr><td>Item</td><td>Fee</td></tr><tr><td>License</td><td>100,000</td></tr><tr><td>Maintenance</td><td>20,000</td></tr></table>", "page_idx": 1},
+  {"type": "image", "img_path": "images/sig.jpg", "image_caption": [], "image_footnote": [], "page_idx": 2},
+  {"type": "image", "img_path": "images/logo.jpg", "image_caption": ["Company logo"], "page_idx": 2},
+  {"type": "equation", "img_path": "images/eq.jpg", "text": "$$\nF = 1.05 \\times B\n$$", "text_format": "latex", "page_idx": 2},
+  {"type": "page_number", "text": "3", "page_idx": 2},
+  {"type": "text", "text": "2. Term", "text_level": 2, "page_idx": 3},
+  {"type": "text", "text": "The term is three years.", "page_idx": 3},
+  {"type": "text", "text": "   ", "page_idx": 3}
+]
