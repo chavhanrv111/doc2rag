@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "doc2rag"
+version = "0.2.0"
+description = "Turn PDFs, Office files and images into full text and vector-store-ready chunks (MinerU / Docling)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+keywords = ["rag", "pdf", "parsing", "chunking", "docling", "mineru", "vector-store"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Topic :: Text Processing",
+    "Typing :: Typed",
+]
+# The core has no dependencies; pick parsers/integrations via extras.
+dependencies = []
+
+[project.optional-dependencies]
+docling = ["docling>=2.0"]
+# MinerU 3.x supports Python 3.10-3.13 and drives the `mineru -p/-o` CLI that 4.x removed.
+mineru = ['mineru[core]>=3.4.1,<4; python_version < "3.14"']
+all = ["doc2rag[docling,mineru]"]
+certs = ["truststore>=0.9"]
+langchain = ["langchain-core>=0.2.11"]
+llamaindex = ["llama-index-core>=0.10"]
+dev = ["pytest>=7"]
+
+[project.scripts]
+doc2rag = "doc2rag.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+doc2rag = ["py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,6 @@
+.venv
+.certs
+doc2rag_output
+**/__pycache__
+.pytest_cache
+tests

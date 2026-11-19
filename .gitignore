@@ -1,0 +1,10 @@
+.venv/
+.certs/
+doc2rag_output/
+__pycache__/
+*.egg-info/
+.pytest_cache/
+.mcp
+contracts-data/
+.vscode/
+tests/
